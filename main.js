@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 const reaction = require('reaction');
 
-const {prefix , token} = require('./config.json');
+const prefix = "~"
 
 const ms = require('ms');
 const client = new Discord.Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION']})
@@ -646,4 +646,4 @@ client.on("messageReactionRemove", async (reaction, user) => {
 });
 
 
-client.login(token);
+client.login(process.env.token);
